@@ -61,7 +61,7 @@ li3 = [
 # print(li3)
 # shape => 3 X 3 X 2
 
-# n1 = np.random.rand(3,3, 2)
+n1 = np.random.rand(3,3, 2) # --> 3 * 3 * 2 = 18
 # shape -> 3 X 3 X 2. at rool level how many elements in each list -> 2
 # print(n1[0][0])
 # n1[0][0] = 5
@@ -71,4 +71,73 @@ li3 = [
 # print(n2)
 
 n3 = np.random.randint(50, size=100) # => [0, 50) -> int-> 0, 1, 2
-print(n3)
+# print(n3)
+
+# print(n1)
+ 
+# eg -> (3 X 3 X 2) = 18 ==reshape==> (4 X 9) = 9
+
+# n_arr = np.array([1,2,3,5,6,7,87,88, 23])
+# n_arr2 = np.arange(5, 20)
+
+# print(n_arr.shape)
+
+# print(type(n_arr2))
+# print(n_arr2)
+
+# a = n_arr2.reshape(3, 5)
+# print(n_arr2)
+# print(a)
+
+# n_arr.reshape(3, 3)
+
+# print(n_arr)
+# print(n_arr.shape)
+
+
+# n1 = np.random.rand(3, 2)
+# n2 = np.random.rand(2,3)
+
+# tup = (n1, n2)
+# # print(tup)
+# print(n1)
+# print(n2)
+
+# # n3 = np.vstack(tup)
+""" number of columns must be equal of both nd_arrays vstack """
+# # print(n3)
+
+# n4 = np.hstack(tup)
+""" number of rows must be equal of both nd_arrays in hstack """
+# print(n4)
+
+n1 = np.arange(1,5)
+n2 = np.arange(2, 6)
+
+print(np.column_stack((n1, n2))) 
+""" ===> if n1 & n2 are 2-D arrays then 
+ column_stack will work just like hstack funciton."""
+
+
+#  VSTACK
+n1 = np.array([
+    [1,2,3], 
+    [34,5,64]
+    ])
+n2 = np.array([
+    [1,2,3], 
+    [34,5,64],
+    [65, 22, 21]
+    ])
+
+"""
+[
+    [1,2,3], 
+    [34,5,64],
+    [1,2,3], 
+    [34,5,64],
+    [65, 22, 21]
+]
+
+"""
+np.vstack((n1, n2))
