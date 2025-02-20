@@ -191,7 +191,13 @@ nd_arr = np.array(['4.4', '6.7', '8.6', '2.4456'])
 # 9 -> laplace distribution
 
 # numpy.random.laplace(loc=0.0, scale=1.0, size=None)
-lap_dist = np.random.laplace(loc=8.9,scale=1.5, size=35)
-mn = sum(lap_dist)/35
-print(lap_dist)
-print(mn)
+# lap_dist = np.random.laplace(loc=8.9,scale=1.5, size=35)
+# mn = sum(lap_dist)/35
+# print(lap_dist)
+# print(mn)
+
+
+
+# uniformly distributed
+uni_data = np.random.uniform(1, 15, 10)
+print(uni_data)
