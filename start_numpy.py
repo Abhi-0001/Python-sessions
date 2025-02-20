@@ -114,7 +114,7 @@ n3 = np.random.randint(50, size=100) # => [0, 50) -> int-> 0, 1, 2
 n1 = np.arange(1,5)
 n2 = np.arange(2, 6)
 
-print(np.column_stack((n1, n2))) 
+# print(np.column_stack((n1, n2))) 
 """ ===> if n1 & n2 are 2-D arrays then 
  column_stack will work just like hstack funciton."""
 
@@ -140,4 +140,58 @@ n2 = np.array([
 ]
 
 """
-np.vstack((n1, n2))
+# np.vstack((n1, n2))
+
+# one_d_arr = np.array([1,2,3])
+# two_d_arr = np.array([
+#     [4,5,22],
+#     [23, 63, 24]
+# ])
+
+# print(two_d_arr.shape)
+
+# merged_arr = np.vstack((one_d_arr, two_d_arr))
+# print(merged_arr)
+
+
+# a = '4'
+# print(type(a))
+# a = int(a)
+
+# print(type(a))
+nd_arr = np.array(['4.4', '6.7', '8.6', '2.4456'])
+
+# print(nd_arr)
+# li = [] 
+# for item in nd_arr:
+#     li.append(float(item))
+
+# nd_arr_f = np.array(li)
+
+# nd_arr_f = nd_arr.astype(float)
+# print(nd_arr_f)
+
+
+# 6th 
+# rand
+# randn(shape) --> it generated the values with Gausian distribution --> mean ~ 0 & variance 1
+# randint
+# mat = np.random.randn(5,6)
+# # mat = np.random.rand(5,6) 
+# """
+# rand:
+# Create an array of the given shape and populate it with random samples from a
+# uniform distribution over [0, 1).
+# """
+# mean = sum(sum(mat)) / 30 
+# variance = np.var(mat)
+
+# print(mean, " ", variance)
+
+# 9 -> laplace distribution
+
+# numpy.random.laplace(loc=0.0, scale=1.0, size=None)
+lap_dist = np.random.laplace(loc=8.9,scale=1.5, size=35)
+mn = sum(lap_dist)/35
+print(lap_dist)
+print(mn)
