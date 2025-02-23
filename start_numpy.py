@@ -189,15 +189,45 @@ nd_arr = np.array(['4.4', '6.7', '8.6', '2.4456'])
 # print(mean, " ", variance)
 
 # 9 -> laplace distribution
-
 # numpy.random.laplace(loc=0.0, scale=1.0, size=None)
-# lap_dist = np.random.laplace(loc=8.9,scale=1.5, size=35)
-# mn = sum(lap_dist)/35
+lap_dist = np.random.laplace(loc=8.9,scale=2, size=35)
 # print(lap_dist)
-# print(mn)
 
+# aver = sum(lap_dist) / len(lap_dist)
+# print(aver)
+# print(np.var(lap_dist))
 
+# uniformly distributed random samples
+# uni_data = np.random.uniform(1, 15, 10)
+# print(uni_data)
 
-# uniformly distributed
-uni_data = np.random.uniform(1, 15, 10)
-print(uni_data)
+# INTERSECTION
+n1 = np.array([5, 3, 2, 4])
+n2 = np.array([5, 4,  6, 76])
+inter = np.intersect1d(n1, n2, assume_unique=True, )
+# inter = np.intersect1d(n1, n2, return_indices=True)
+# inter = np.intersect1d(n1, n2, assume_unique=True, return_indices=True)
+# print(inter)
+
+# Set A = {1,2, 3} , Set B = {1, 4, 5}
+# A - B = {2, 3}
+# dif = np.setdiff1d(n1, n2)
+# dif = np.setdiff1d(n2, n1)
+# print(dif)
+
+n1 = np.array([5, 3, 2, 4])
+
+# print(n1 + 2)
+# print(n1 - 2)
+# print(n1 * 2)
+# print(n1 / 2)
+
+# print(np.argmin(n1))
+# print(np.argmax(n1))
+
+arr_2d = np.array([[1, 9,3], 
+                   [7,8,2], 
+                   [4,6, 5]])
+
+print(arr_2d.argmax())
+print(arr_2d.argmin(axis=1))
